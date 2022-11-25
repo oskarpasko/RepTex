@@ -21,5 +21,12 @@ def convert_phrase(text):
 
     print(text)
 
-def convert_file():
-    pass
+def convert_file(file):
+
+    try: 
+        with open(f'input_files/{file}') as file_object:
+            contents = file_object.read()
+    except FileNotFoundError:
+        print("This file does not exist!")
+    else:
+        print(contents)
