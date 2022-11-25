@@ -29,4 +29,4 @@ def convert_file(file):
     except FileNotFoundError:
         print("This file does not exist!")
     else:
-        print(contents)
+        convert_phrase(contents)
