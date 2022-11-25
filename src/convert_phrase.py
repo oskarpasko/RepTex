@@ -1,3 +1,15 @@
+def convert_file(file):
+
+    try: 
+        with open(f'input_files/{file}') as file_object:
+            contents = file_object.read()
+    except FileNotFoundError:
+        print("This file does not exist!")
+    else:
+        filename = f'output_files/output_{file}'
+        with open(filename, 'w') as output_file:
+            output_file.write(convert_phrase(contents))
+
 def convert_phrase(text):
     text = text.replace('ą', '\k{a}')
     text = text.replace('ć', "\\'c")
@@ -20,15 +32,3 @@ def convert_phrase(text):
     text = text.replace('Ź', "\\'Z")
 
     return text
-
-def convert_file(file):
-
-    try: 
-        with open(f'input_files/{file}') as file_object:
-            contents = file_object.read()
-    except FileNotFoundError:
-        print("This file does not exist!")
-    else:
-        filename = f'output_files/output_{file}'
-        with open(filename, 'w') as output_file:
-            output_file.write(convert_phrase(contents))
