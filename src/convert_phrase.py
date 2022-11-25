@@ -20,3 +20,6 @@ def convert_phrase(text):
     text = text.replace('Ź', "\\'Z")
 
     print(text)
+
+def convert_file():
+    pass
