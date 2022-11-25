@@ -10,7 +10,7 @@ match(choice):
 
     case '1':
         txt = input('Enter Your phrase: ')
-        convert_phrase(txt)
+        print(convert_phrase(txt))
     case '2':
         user_file = input("Enter file's name: ")
         convert_file(user_file)

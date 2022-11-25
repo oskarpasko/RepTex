@@ -19,7 +19,7 @@ def convert_phrase(text):
     text = text.replace('Ż', '\.Z')
     text = text.replace('Ź', "\\'Z")
 
-    print(text)
+    return text
 
 def convert_file(file):
 
@@ -29,4 +29,6 @@ def convert_file(file):
     except FileNotFoundError:
         print("This file does not exist!")
     else:
-        convert_phrase(contents)
+        filename = f'output_files/output_{file}'
+        with open(filename, 'w') as output_file:
+            output_file.write(convert_phrase(contents))
