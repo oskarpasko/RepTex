@@ -5,7 +5,7 @@ print('Welcome in RepTeX!')
 print('1. Simple phrase')
 print("2. File's Convert")
 print('3. Help')
-choice = input("\nWhich option You'd like to choose?")
+choice = input("\nWhich option You'd like to choose: ")
 
 match(choice):
 
