@@ -32,18 +32,3 @@ def convert_phrase(text):
     text = text.replace('Ź', "\\'Z")
 
     return text
-
-def feature_help():
-    print ("""
-    1. == Simple phrase ==
-    You can convert simple phrase.
-    You should enter Your phrase.
-    Then You will see converted phrase in console.\n
-    2. == File's Convert ==
-    You can convert whole file.
-    Paste file .txt in 'input_files' folder.
-    Then in app after that You chose 2nd option
-    enter Your file's name for example file.txt .
-    Later Your converted file will wait in 
-    'output_files' folder.
-    """)
